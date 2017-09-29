@@ -1,0 +1,32 @@
+#coding:utf-8
+#@time     :     2017/9/29 20:40
+#@Author     :    mengzh
+#@file    :{name}.py
+# @Site    : 
+# @File    : function.py
+# @Software: PyCharm Community Edition
+
+
+from selenium import webdriver
+import os
+#截图函数
+def insert_img(driver, file_name):
+    base_dir = os.path.dirname(os.path.dirname(__file__))
+    #print(base_dir)
+    base_dir = str(base_dir)
+  #print(base_dir)
+    base_dir = base_dir.replace('\\','/')
+    #print(base_dir)
+    base = base_dir.split('/mail')[0]
+   #print(base)
+    file_path = base + '/mail/report/image/' + file_name
+    driver.get_screenshot_as_file(file_path)
+
+'''
+17 #用于验证该脚本是否有效
+18 if __name__ == '__main__':
+19     driver = webdriver.Chrome()
+20     driver.get('http://www.baidu.com')
+21     insert_img(driver, 'baidu.jpg')
+22     driver.quit()
+23 '''
