@@ -59,4 +59,3 @@ if __name__ == "__main__":
     new_report = new_report(test_report)
     send_mail(new_report)
 
-#http://www.cnblogs.com/diaosicai/p/6370321.html
